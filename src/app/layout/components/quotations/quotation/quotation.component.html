@@ -1,0 +1,21 @@
+<div class="quotation-inputs">
+    <app-quotation-input
+        [strPlaceHolderInput]="strPlaceHolderEU"
+        [bIsDisabledInput]="bIsDisabledInputEU"
+        [bValidateInput]="bValidateInputEU"
+        (eeChangeTextValueOutput)="setInputValueEU($event)"
+    ></app-quotation-input>
+    <app-quotation-input
+        [strPlaceHolderInput]="strPlaceHolderUSD"
+        [bIsDisabledInput]="bIsDisabledInputUSD"
+        [bValidateInput]="bValidateInputUSD"
+        [numQuotationValueInput]="numValueUSD"
+    ></app-quotation-input>
+</div>
+<div class="quotation-button">
+    <app-quotation-button
+        [bIsDisabledInput]="bIsDisabledCalculate"
+        [numQuotationValue]="numValueEU"
+        (eeCalculateValueOutput)="setInputValueCalculated($event)"
+    ></app-quotation-button>
+</div>

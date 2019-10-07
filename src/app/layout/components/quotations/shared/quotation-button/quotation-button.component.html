@@ -1,0 +1,10 @@
+<input 
+    class="quotation-button" 
+    type="button" 
+    value="CALCULATE"
+    [disabled]="bIsDisabledInput"
+    (click)="calculateExchange()"
+>
+<div [hidden]="!bIsGetExchangeRate">
+    <img src="./assets/images/Loader24px.gif"/>
+</div>

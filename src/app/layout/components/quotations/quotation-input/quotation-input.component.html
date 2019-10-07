@@ -1,0 +1,8 @@
+<input 
+    class="quotation-input" 
+    type="text" 
+    [(ngModel)]="numQuotationValue" 
+    (keyup)="validateValue($event)"
+    placeholder="{{strPlaceHolderInput}}"
+    [disabled]="bIsDisabledInput"
+>
