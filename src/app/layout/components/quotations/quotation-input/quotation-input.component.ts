@@ -29,14 +29,16 @@ export class QuotationInputComponent implements OnInit, OnChanges {
   }
 
   validateValue(keyPressed){
-    if(this.bValidateInput){
-      if(this.patronDecimal.test(this.numQuotationValue)){
-        this.emitChangeValue();
-      }else{
-        if(keyPressed.key=="." && !isNaN(this.numQuotationValue)){
-          console.log("es un punto");
+    if(this.numQuotationValue){
+      if(this.bValidateInput){
+        if(this.patronDecimal.test(this.numQuotationValue)){
+          this.emitChangeValue();
         }else{
-          this.numQuotationValue = this.getOldValue();
+          if(keyPressed.key=="." && !isNaN(this.numQuotationValue)){
+            console.log("es un punto");
+          }else{
+            this.numQuotationValue = this.getOldValue();
+          }
         }
       }
     }
